@@ -6,6 +6,11 @@
       "Description": "The minimum number of instances",
       "Default": 3
     },
+        "SpotBidPrice": {
+      "Type": "Number",
+      "Description": "Spot Instance bid price",
+      "Default": "0.0"
+    },
     "MaxSize": {
       "Type": "String",
       "Description": "The maximum number of instances",
@@ -111,6 +116,9 @@
         ],
         "InstanceType": {
           "Ref": "InstanceType"
+        },
+        "SpotPrice": {
+          "Ref": "SpotBidPrice"
         },
         "ImageId": {
           "Ref": "ImageId"
